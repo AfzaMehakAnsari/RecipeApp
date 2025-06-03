@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer Yellow Circle (Border) -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FDC100"/> <!-- Yellow border -->
+        </shape>
+    </item>
+
+    <!-- Inner White Circle (Background) -->
+    <item android:left="12dp" android:right="6dp" android:top="12dp" android:bottom="6dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF"/> <!-- White inside -->
+        </shape>
+    </item>
+</layer-list>

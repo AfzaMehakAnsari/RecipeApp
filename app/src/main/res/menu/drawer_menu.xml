@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/tag_main_course" android:title="main course" />
+    <item android:id="@+id/tag_side_dish" android:title="side dish" />
+    <item android:id="@+id/tag_dessert" android:title="dessert" />
+    <item android:id="@+id/tag_appetizer" android:title="appetizer" />
+    <item android:id="@+id/tag_salad" android:title="salad" />
+    <item android:id="@+id/tag_bread" android:title="bread" />
+    <item android:id="@+id/tag_breakfast" android:title="breakfast" />
+    <item android:id="@+id/tag_soup" android:title="soup" />
+    <item android:id="@+id/tag_beverage" android:title="beverage" />
+    <item android:id="@+id/tag_sauce" android:title="sauce" />
+    <item android:id="@+id/tag_marinade" android:title="marinade" />
+    <item android:id="@+id/tag_fingerfood" android:title="fingerfood" />
+    <item android:id="@+id/tag_snack" android:title="snack" />
+    <item android:id="@+id/tag_drink" android:title="drink" />
+</menu>

@@ -1,0 +1,535 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Main Content with Bottom Navigation inside CoordinatorLayout -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/splash_bg">
+
+            <!-- TOP TOOLBAR WITH ONLY LOGO CENTER -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/background"
+                android:elevation="4dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/app_logo"
+                        android:src="@drawable/logo_samd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/app_name" />
+
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+            <!-- ROW OF LINE PIC LEFT & COOKING PIC RIGHT -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"/>
+
+
+            <!-- SEARCH VIEW -->
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_view_bg"
+                app:iconifiedByDefault="false"
+                app:queryHint="Search Your Recipe"
+                app:searchIcon="@drawable/search"
+                android:layout_margin="8dp"
+                android:padding="4dp"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:scrollbars="none">
+
+
+                <LinearLayout
+                    android:id="@+id/icon_circle_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Ek icon + label ka vertical group -->
+                    <LinearLayout
+                        android:id="@+id/italian_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+
+                        <FrameLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuisine_circle_border"
+                            android:padding="4dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="12dp"
+                            android:src="@drawable/italian"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/circle_background"
+                            android:clipToOutline="true"
+                            android:contentDescription="Icon 1" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Italian"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginTop="4dp" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/japanese_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+
+                        <FrameLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuisine_circle_border"
+                            android:padding="4dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="12dp"
+                            android:src="@drawable/japanese"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/white_circle"
+                            android:clipToOutline="true"
+                            android:contentDescription="Icon 1" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Japanese"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginTop="4dp" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/korean_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+
+                        <FrameLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuisine_circle_border"
+                            android:padding="4dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="12dp"
+                            android:src="@drawable/korean"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/white_circle"
+                            android:clipToOutline="true"
+                            android:contentDescription="Icon 2" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Korean"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/spanish_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+
+                        <FrameLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuisine_circle_border"
+                            android:padding="4dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="12dp"
+                            android:src="@drawable/spanish"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/white_circle"
+                            android:clipToOutline="true"
+                            android:contentDescription="Icon 2" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Spanish"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/british_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+
+                        <FrameLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuisine_circle_border"
+                            android:padding="4dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="12dp"
+                            android:src="@drawable/british"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/white_circle"
+                            android:clipToOutline="true"
+                            android:contentDescription="Icon 2" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="British"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/european_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+
+                        <FrameLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuisine_circle_border"
+                            android:padding="4dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="12dp"
+                            android:src="@drawable/european"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/white_circle"
+                            android:clipToOutline="true"
+                            android:contentDescription="Icon 2" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="European"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/asian_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+
+                        <FrameLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuisine_circle_border"
+                            android:padding="4dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="12dp"
+                            android:src="@drawable/asian"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/white_circle"
+                            android:clipToOutline="true"
+                            android:contentDescription="Icon 2" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Asian"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/chinese_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+
+                        <FrameLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuisine_circle_border"
+                            android:padding="4dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="12dp"
+                            android:src="@drawable/chinese"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/white_circle"
+                            android:clipToOutline="true"
+                            android:contentDescription="Icon 2" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chinese"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/mediterranean_circle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="16dp">
+
+                    <FrameLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/cuisine_circle_border"
+                        android:padding="4dp">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:padding="12dp"
+                        android:src="@drawable/mediterranean"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/white_circle"
+                        android:clipToOutline="true"
+                        android:contentDescription="Icon 1" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mediterranean"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/thai_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+
+                        <FrameLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuisine_circle_border"
+                            android:padding="4dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="12dp"
+                            android:src="@drawable/thai"
+                            android:background="@drawable/circle_background"
+                            android:scaleType="centerInside"
+                            android:contentDescription="Icon 2" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thai"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+                    <!-- Aur icons isi tarah add karen -->
+                    <LinearLayout
+                        android:id="@+id/african_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+
+                        <FrameLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/cuisine_circle_border"
+                            android:padding="4dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:padding="12dp"
+                            android:src="@drawable/african"
+                            android:scaleType="centerCrop"
+                            android:background="@drawable/white_circle"
+                            android:clipToOutline="true"
+                            android:contentDescription="Icon 2" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="African"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+            <!-- RECYCLER VIEW -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerrandom"
+                android:layout_width="match_parent"
+                android:layout_height="425dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:menu="@menu/bottom_nav"
+            app:itemIconTint="@drawable/bottom_nav_selector"
+            app:itemTextColor="@drawable/bottom_nav_selector"
+            app:itemIconSize="30dp"
+            android:background="@color/background"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_blog"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="134dp"
+            android:contentDescription="ChatBot"
+            android:src="@drawable/blog"
+            app:maxImageSize="40dp"
+            app:tint="@color/text_primary" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_chatbot"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="68dp"
+            android:contentDescription="ChatBot"
+            android:src="@drawable/bot"
+            app:maxImageSize="56dp"
+            app:tint="@color/yellow_dark" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- NAVIGATION VIEW FOR DRAWER -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_menu"
+        app:itemTextColor="@color/text_secondary"
+        app:itemIconTint="@color/text_secondary"
+        android:background="@android:color/white"/>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

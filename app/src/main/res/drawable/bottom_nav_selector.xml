@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Active / Selected icon color -->
+    <item android:color="@color/text_secondary" android:state_checked="true" />
+    <!-- Inactive / Unselected icon color -->
+    <item android:color="@color/icon_grey" />
+</selector>

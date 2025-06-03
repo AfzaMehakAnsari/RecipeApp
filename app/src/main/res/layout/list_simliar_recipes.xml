@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/similar_recipe_holder"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/background">
+
+    <LinearLayout
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="10dp">
+
+        <!-- Recipe Title -->
+        <TextView
+            android:id="@+id/textView_Similar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Similar Recipes"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Recipe Image -->
+        <ImageView
+            android:id="@+id/imageView_similar"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginBottom="6dp"
+            android:scaleType="centerCrop"/>
+
+        <!-- Serving Info -->
+        <TextView
+            android:id="@+id/textView_Similar_serving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Serves 2"
+            android:textColor="@color/text_secondary"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

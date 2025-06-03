@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_holder"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="16dp"
+    card_view:cardElevation="8dp"
+    card_view:cardBackgroundColor="@color/background"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardPreventCornerOverlap="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- Recipe Image -->
+        <ImageView
+            android:id="@+id/imageView_food"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/image_rounded_background"
+            android:contentDescription="Recipe Image" />
+
+        <!-- Text Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:paddingStart="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textView_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recipe Title"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:textSize="18sp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/textView_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Used: 2"
+                android:textColor="#4CAF50"
+                android:paddingTop="4dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView_missed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Missed: 1"
+                android:textColor="#F44336"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

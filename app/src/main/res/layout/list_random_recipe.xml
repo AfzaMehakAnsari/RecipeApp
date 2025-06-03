@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/random_list_container"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="6dp"
+app:cardCornerRadius="16dp"
+app:cardElevation="6dp"
+app:cardUseCompatPadding="true"
+app:cardPreventCornerOverlap="true"
+app:cardBackgroundColor="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_title"
+            android:text="Dish Name"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:textSize="22sp"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imageView_Food"
+            android:scaleType="centerCrop"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:src="@drawable/ic_servings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:tint="@color/text_secondary" /> <!-- Tint applied here -->
+
+                <TextView
+                    android:id="@+id/textView_servings"
+                    android:text="2 Persons"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:src="@drawable/ic_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:tint="@color/text_secondary" /> <!-- Tint applied here -->
+
+                <TextView
+                    android:id="@+id/textView_like"
+                    android:text="2 Persons"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:src="@drawable/ic_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:tint="@color/text_secondary" /> <!-- Tint applied here -->
+
+                <TextView
+                    android:id="@+id/textView_time"
+                    android:text="2 Persons"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_favorite"
+                    android:layout_width="22dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/heart"
+                    app:tint="@color/text_secondary" /> <!-- Tint applied here -->
+
+                <TextView
+                    android:id="@+id/textView_favourite"
+                    android:text="favourite"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

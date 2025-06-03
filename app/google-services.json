@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "810313741389",
+    "project_id": "cooksy-app-f47d1",
+    "storage_bucket": "cooksy-app-f47d1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810313741389:android:8ec7097c28e28decabd804",
+        "android_client_info": {
+          "package_name": "com.example.recipeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHV9rltirF5O_Cg7yp-37IrUBNTTwdep0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
