@@ -25,7 +25,6 @@ This Android app takes a user's available ingredients and returns personalized r
 
 ### 🎨 Frontend Technologies
 - **XML Layout Design**
-- **Figma** – UI/UX wireframes
 
 ### 🔗 Backend Technologies
 - **Firebase Authentication** – Secure login/signup
