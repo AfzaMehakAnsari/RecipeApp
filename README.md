@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/0a3ede49-7c8b-4c78-aaef-1b004a43b21c)
+
 # 🍽️ Smart Recipe Suggestion App
 
 A **smart Recipe Suggestion App** that recommends dishes based on user-input ingredients. Built using **Java** and **XML** in **Android Studio**, this app aims to simplify meal planning and reduce food waste.  
